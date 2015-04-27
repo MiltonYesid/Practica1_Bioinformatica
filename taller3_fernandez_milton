@@ -1,0 +1,19 @@
+#crear el archivo para inscribir los datos
+gedit ejercicio-milton-fernandez.sh
+#crear la carpeta, se descarga y se descomprime
+mkdir practica3
+cd practica3
+wget ftp://ftp.ncbi.nih.gov/gene/DATA/gene_group.gz
+gzip -d gene_group.gz 
+#crea el archivo filtros
+mkdir filtros
+#separamos el archivo 
+grep "^9601" gene_group  > filtros/tax_9601.txtç
+#reemplaza la palabra related en el archivo tax_ ...
+sed -i 's/Related/_/' filtros/tax_9601.txt 
+# adicionar en cada fila la palabra ENSEMBL:
+sed -i 's/^/ENSEMBL:/' gene_group
+# ordenar el archivo y contar las lineas
+sort | wc -l gene_group
+#partir en segmentos de 200000 lineas
+split -l 200000  gene_group grupo --additional-suffix=.out
