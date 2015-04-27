@@ -13,3 +13,26 @@ cut -f 2 ensayo.txt | sed -i '/*'
 
 /* function gret*/
 grep 'amarillo' ensayo.txt | sort > amarillo.txt
+
+/*practica
+nano ciclos.sh
+
+#!/bin/bash
+
+
+while read linea 
+do
+echo $linea"_prueba"
+done < ensayo.txt
+
+for archivo in *.txt
+do
+ echo "hola">> $archivo
+done
+
+
+>> no sobreescribe sino que le coloca despues
+
+paste file2.ext file1.ext > file3.ext
+
+/*para ejecutar chmod +x file.sh
