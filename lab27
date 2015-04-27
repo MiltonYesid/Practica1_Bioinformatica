@@ -36,3 +36,5 @@ done
 paste file2.ext file1.ext > file3.ext
 
 /*para ejecutar chmod +x file.sh
+
+wget //para bajar archivos
