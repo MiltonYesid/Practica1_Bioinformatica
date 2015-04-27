@@ -5,3 +5,11 @@ sed -i  's/azul/rojo/g'
 
 // para quitar los espacios de una cadena mediante una expresion regular
 sed -i  '/*$/d'
+//obtener la segunda columna
+cut -f 2 filename.ext
+
+/*mas complejo*/
+cut -f 2 ensayo.txt | sed -i '/*'
+
+/* function gret*/
+grep 'amarillo' ensayo.txt | sort > amarillo.txt
