@@ -1,0 +1,7 @@
+//sed para cambiar un segmento de un archivo por una cadena
+// -i para que no cree otro archivo, sobrescriba
+// g para global
+sed -i  's/azul/rojo/g'
+
+// para quitar los espacios de una cadena mediante una expresion regular
+sed -i  '/*$/d'
